@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO App</title>
+
+    </head>
+    <body>
+        <main>
+            <table>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Event Date</th>
+                    <th>Event Time</th>
+                </tr>
+                {% for item in todo_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.date.date() }}</td>
+                        <td>{{ item.time }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <form method="GET" action="/addItem">
+                <input type="submit" name="button" value="Add Items">
+            </form>
+        </main>
+    </body>
+</html>
