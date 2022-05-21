@@ -1,0 +1,19 @@
+* {
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+table * {
+    padding: 20px;
+    border: 2px solid grey;
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}

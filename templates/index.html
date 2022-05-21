@@ -2,10 +2,12 @@
 <html>
     <head>
         <title>TODO App</title>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/styles/index.css">
     </head>
     <body>
         <main>
+            <h1>TODO List</h1>
             <table>
                 <tr>
                     <th>Event Name</th>
@@ -15,7 +17,7 @@
                 {% for item in todo_items %}
                     <tr>
                         <td>{{ item.name }}</td>
-                        <td>{{ item.date.date() }}</td>
+                        <td>{{ item.date.strftime('%B %d, %Y') }}</td>
                         <td>{{ item.time }}</td>
                     </tr>
                 {% endfor %}
