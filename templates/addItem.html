@@ -2,6 +2,7 @@
 <html>
     <body>
         <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
             <link rel="stylesheet" href="../static/styles/index.css">
         </head>
         <main>
@@ -9,10 +10,23 @@
                 Add an Item
             </h1>
             <form method='POST' action="/addItem">
-                <p>Enter the Item's Name: <input type="text" name="itemName"></p>
-                <p>Enter the Item's Date(XX/XX/XXXX): <input type="text" name="itemDate"></p>
-                <p>Enter the Item's Time(XX:XX [AM/PM]): <input type="text" name="itemTime"></p>
-                <input type="submit" value="Submit">
+                <table>
+                    <tr>
+                        <th>Enter the Item's Name</th>
+                        <td><input type="text" name="itemName"></td>
+                    </tr>
+                    <tr>
+                        <th>Enter the Item's Date(XX/XX/XXXX)</th>
+                        <td><input type="text" name="itemDate"></td>
+                    </tr>
+                    <tr>
+                        <th>Enter the Item's Time(XX:XX [AM/PM])</th>
+                        <td><input type="text" name="itemTime"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Submit"></td>
+                    </tr>
+                </table>                
             </form>
             <form action="/" method="GET">
                 <input type="submit" value="Done">
