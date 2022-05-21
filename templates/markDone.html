@@ -10,24 +10,20 @@
             <h1>TODO List</h1>
             <table>
                 <tr>
+                    <td></td>
                     <th>Event Name</th>
                     <th>Event Date</th>
                     <th>Event Time</th>
                 </tr>
                 {% for item in todo_items %}
                     <tr>
+                        <td><!-- Add Remove Button and make it work --></td>
                         <td>{{ item.name }}</td>
                         <td>{{ item.date.strftime('%B %d, %Y') }}</td>
                         <td>{{ item.time }}</td>
                     </tr>
                 {% endfor %}
             </table>
-            <form method="GET" action="/addItem">
-                <input type="submit" name="button" value="Add Items">
-            </form>
-            <form action="/markDone" method="GET">
-                <input type="submit" name="button" value="Mark Done">
-            </form>
         </main>
     </body>
 </html>
